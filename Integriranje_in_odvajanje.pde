@@ -6,12 +6,12 @@ void setup() {
   float[] pot = new float[hitrosti.length];
   float[] pospesek = new float[hitrosti.length];
   
-  // integriranje (izračun poti tega objekta, če je vsaka točka meritve narazen za 1 sekundo)
+  // integriranje (izračun poti tega objekta)
   pot[0] = 0;
   for (int i = 1; i < hitrosti.length; i++) 
     pot[i] = hitrosti[i] + pot[i-1];
 
-  // odvajanje (izračun pospeška tega objekta, če je vsaka točka meritev narazen za 1 sekundo)
+  // odvajanje (izračun pospeška tega objekta)
   for (int i = 1; i < hitrosti.length; i++)
     pospesek[i] = hitrosti[i] - hitrosti[i-1];
     
